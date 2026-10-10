@@ -18,7 +18,7 @@ function Page({ page, slug }: { page: string; slug?: string }) {
     case 'experience':
       return <EntryPage title="Experience" intro="Where I've worked and what I did there." entries={experience} />
     case 'projects':
-      return <EntryPage title="Projects" intro="Things I've built on my own time." entries={projects} />
+      return <EntryPage title="Projects" intro="Things I've built." entries={projects} />
     case 'education':
       return <EntryPage title="Education" intro="Where I'm studying." entries={education} />
     case 'resume':

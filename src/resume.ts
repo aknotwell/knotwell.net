@@ -61,6 +61,18 @@ export const experience: Entry[] = [
 
 export const projects: Entry[] = [
   {
+    title: 'Search Engine & HTTP Server',
+    org: 'Systems project',
+    tech: 'C, C++, POSIX sockets',
+    bullets: [
+      'Built a full-text search engine from the ground up, starting with a doubly-linked list and chained hash table written in C with manual memory management.',
+      'Implemented directory crawling, a file parser, and an in-memory inverted index mapping each word to its positions in every document, plus a query shell that ranks multi-word results by term frequency.',
+      'Serialized the inverted index to a portable on-disk binary format (big-endian hash tables with a CRC32 checksum) and wrote readers that answer queries directly from multiple index files.',
+      'Wrote the networking and request handling for a multithreaded HTTP/1.1 server: IPv4/IPv6 sockets, persistent connections, and request parsing that handles partial reads, serving both search results and static files.',
+      'Hardened the server against directory traversal (realpath-based path checks returning 403) and cross-site scripting (HTML-escaping user queries).',
+    ],
+  },
+  {
     title: 'FFN-Bot',
     org: 'Reddit bot',
     tech: 'Python, PRAW',
