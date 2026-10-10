@@ -26,7 +26,7 @@ export const education: Entry[] = [
     location: 'Seattle, WA',
     dates: 'Sep. 2024 – June 2028',
     bullets: [
-      'Relevant courses: Systems Programming, Data Structures and Parallelism, Introduction to Data Management, Machine Learning, Discrete Math, Probability and Statistics.',
+      'Relevant courses: Systems Programming, Data Structures & Parallelism, Data Management, Machine Learning, Probability & Statistics.',
     ],
   },
 ]
@@ -38,10 +38,11 @@ export const experience: Entry[] = [
     location: 'Seattle, WA',
     dates: 'Jan. 2026 – June 2026',
     bullets: [
-      'Helped develop an automated virtual teaching assistant for Allen School courses using Python and FastAgent to streamline student support.',
-      'Designed and implemented a text-to-speech (TTS) service using Google Cloud, integrating it into an existing data-processing pipeline.',
-      'Migrated the data pipeline to Pydantic schemas, enforcing type safety and reducing runtime validation errors.',
-      'Created a Python module that retrieves and displays specific lecture slides from a PDF database using information from targeted LLM prompts.',
+      'Contributed to ChatCSE, an AI teaching assistant for Allen School courses built on FastAPI and Next.js.',
+      'Integrated Google Cloud Text-to-Speech to narrate TA answers, with safe credential handling and error fallback.',
+      'Designed Pydantic models for structured LLM output (transcript plus cited slides) via FastAgent.',
+      'Rendered LLM-cited lecture slides to images with PyMuPDF and built a slide viewer in React/TypeScript.',
+      'Redesigned slide storage to be request-scoped for concurrent users, served via a path-traversal-safe API.',
     ],
   },
   {
@@ -50,11 +51,11 @@ export const experience: Entry[] = [
     location: 'Kirkland, WA',
     dates: 'June 2025 – Sep. 2025',
     bullets: [
-      'Developed a scalable Python microservice that processes up to 1,000 customer support transcripts per batch by leveraging LLM-powered analysis, generating datasets for business analytics.',
-      'Conducted iterative manual reviews of LLM outputs to refine prompt templates, increasing response accuracy and reliability.',
-      'Visualized transcript datasets in QuickSight to track support usage of an internal LLM.',
-      'Automated a PII-secure workflow via GitHub Actions, integrating AWS Secrets Manager for compliant credential handling.',
-      'Optimized processing time by 83% by refactoring batch operations with multithreading.',
+      'Built a Python microservice using LLM analysis to process 1,000 support transcripts per batch.',
+      'Cut processing time by 83% by refactoring batch operations with multithreading.',
+      'Refined LLM prompt templates through iterative output reviews, improving response accuracy.',
+      'Automated a PII-secure workflow with GitHub Actions and AWS Secrets Manager.',
+      "Built QuickSight dashboards to track support teams' usage of an internal LLM.",
     ],
   },
 ]
@@ -85,8 +86,7 @@ export const projects: Entry[] = [
 ]
 
 export const skills: { label: string; items: string[] }[] = [
-  { label: 'Languages', items: ['Java', 'Python', 'SQL', 'C', 'C++'] },
-  { label: 'Frameworks / Libraries', items: ['PyTorch', 'NumPy'] },
-  { label: 'Developer Tools', items: ['Git', 'GitHub', 'GitHub Actions', 'AWS', 'Linux', 'LaTeX'] },
-  { label: 'Databases', items: ['SQLite'] },
+  { label: 'Languages', items: ['Python', 'Java', 'C', 'C++', 'SQL', 'TypeScript'] },
+  { label: 'Frameworks / Libraries', items: ['FastAPI', 'React', 'Next.js', 'Pydantic', 'FastAgent', 'PyTorch', 'NumPy'] },
+  { label: 'Tools', items: ['Git', 'GitHub Actions', 'AWS', 'Google Cloud', 'Linux', 'Valgrind', 'pytest', 'SQLite'] },
 ]
