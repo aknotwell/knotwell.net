@@ -4,6 +4,7 @@ export type Entry = {
   location?: string
   dates?: string
   tech?: string
+  status?: string
   bullets: string[]
 }
 
@@ -16,7 +17,8 @@ export const profile = {
     { label: 'GitHub', href: 'https://github.com/aknotwell' },
   ],
   about:
-    "I'm a computer science student at the University of Washington who likes building practical tools, from LLM-powered data pipelines to developer tooling and bots. Lately I've been working on an AI teaching assistant at the UW Systems Lab.",
+    "I'm a computer science student at the University of Washington who likes building practical tools, from LLM-powered data pipelines to developer tooling and bots. Most recently I helped build an AI teaching assistant at the UW Systems Lab.",
+  currently: 'Taking classes, chasing bugs, and debugging my sleep schedule.',
 }
 
 export const education: Entry[] = [
@@ -64,6 +66,7 @@ export const projects: Entry[] = [
   {
     title: 'Search Engine & HTTP Server',
     org: 'Systems project',
+    status: 'Completed',
     tech: 'C, C++, POSIX sockets',
     bullets: [
       'Built a full-text search engine from the ground up, starting with a doubly-linked list and chained hash table written in C with manual memory management.',
@@ -76,6 +79,7 @@ export const projects: Entry[] = [
   {
     title: 'FFN-Bot',
     org: 'Reddit bot',
+    status: 'On hold',
     tech: 'Python, PRAW',
     bullets: [
       'Developed a Reddit bot to automatically retrieve and display story metadata, such as word counts and author information, for community members.',

@@ -5,7 +5,10 @@ export function EntryCard({ entry }: { entry: Entry }) {
     <div className="entry">
       <header className="entry-head">
         <div>
-          <h3>{entry.title}</h3>
+          <h3>
+            {entry.title}
+            {entry.status && <span className="status">{entry.status}</span>}
+          </h3>
           <p className="entry-org">
             {entry.org}
             {entry.location && <span> · {entry.location}</span>}

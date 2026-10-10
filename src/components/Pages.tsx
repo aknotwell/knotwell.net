@@ -4,7 +4,6 @@ import { EntryList, SkillList } from './Entries'
 import { PostCard } from './PostCard'
 
 export function About() {
-  const [current, ...past] = experience
   const school = education[0]
 
   return (
@@ -26,19 +25,15 @@ export function About() {
       <section>
         <h2>At a glance</h2>
         <dl className="glance">
-          {current && (
-            <div>
-              <dt>Currently</dt>
-              <dd>
-                {current.title}, <a href="#/experience">{current.org}</a>
-              </dd>
-            </div>
-          )}
-          {past.length > 0 && (
+          <div>
+            <dt>Currently</dt>
+            <dd>{profile.currently}</dd>
+          </div>
+          {experience.length > 0 && (
             <div>
               <dt>Previously</dt>
               <dd>
-                {past.map((e, i) => (
+                {experience.map((e, i) => (
                   <span key={e.title + e.org}>
                     {i > 0 && '; '}
                     {e.title}, <a href="#/experience">{e.org}</a>
@@ -57,7 +52,7 @@ export function About() {
           )}
           {projects.length > 0 && (
             <div>
-              <dt>Building</dt>
+              <dt>Built</dt>
               <dd>
                 {projects.map((p, i) => (
                   <span key={p.title}>
