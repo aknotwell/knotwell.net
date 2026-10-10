@@ -38,10 +38,11 @@ export const experience: Entry[] = [
     location: 'Seattle, WA',
     dates: 'Jan. 2026 – June 2026',
     bullets: [
-      'Built an AI teaching assistant for Allen School courses using Python and FastAgent.',
-      "Implemented a Google Cloud text-to-speech model as a service in the lab's data-processing pipeline.",
-      'Migrated the pipeline to Pydantic schemas, enforcing type safety and reducing type errors by 22%.',
-      'Used targeted LLM prompts to retrieve relevant slides from ~30 lectures per course.',
+      'Contributed to ChatCSE, an AI teaching assistant for Allen School courses built on FastAPI and Next.js.',
+      'Integrated Google Cloud Text-to-Speech to narrate TA answers, with safe credential handling and error fallback.',
+      'Designed Pydantic models for structured LLM output (transcript plus cited slides) via FastAgent.',
+      'Rendered LLM-cited lecture slides to images with PyMuPDF and built a slide viewer in React/TypeScript.',
+      "Fixed a race condition where concurrent requests overwrote slides by isolating each request's output.",
     ],
   },
   {
@@ -85,7 +86,7 @@ export const projects: Entry[] = [
 ]
 
 export const skills: { label: string; items: string[] }[] = [
-  { label: 'Languages', items: ['Python', 'Java', 'C', 'C++', 'SQL'] },
-  { label: 'Frameworks / Libraries', items: ['PyTorch', 'NumPy', 'Pydantic', 'FastAgent'] },
-  { label: 'Tools', items: ['Git', 'GitHub Actions', 'AWS', 'Google Cloud', 'Linux', 'Valgrind', 'QuickSight', 'SQLite'] },
+  { label: 'Languages', items: ['Python', 'Java', 'C', 'C++', 'SQL', 'TypeScript'] },
+  { label: 'Frameworks / Libraries', items: ['FastAPI', 'React', 'Next.js', 'Pydantic', 'FastAgent', 'PyTorch', 'NumPy'] },
+  { label: 'Tools', items: ['Git', 'GitHub Actions', 'AWS', 'Google Cloud', 'Linux', 'Valgrind', 'pytest', 'SQLite'] },
 ]
