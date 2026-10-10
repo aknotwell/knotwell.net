@@ -15,6 +15,8 @@ export const profile = {
     { label: 'LinkedIn', href: 'https://linkedin.com/in/alexander-knotwell' },
     { label: 'GitHub', href: 'https://github.com/aknotwell' },
   ],
+  about:
+    "I'm a computer science student at the University of Washington who likes building practical tools, from LLM-powered data pipelines to developer tooling and bots. Lately I've been working on an AI teaching assistant at the UW Systems Lab.",
 }
 
 export const education: Entry[] = [
