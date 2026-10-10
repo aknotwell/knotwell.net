@@ -42,7 +42,7 @@ export const experience: Entry[] = [
       'Integrated Google Cloud Text-to-Speech to narrate TA answers, with safe credential handling and error fallback.',
       'Designed Pydantic models for structured LLM output (transcript plus cited slides) via FastAgent.',
       'Rendered LLM-cited lecture slides to images with PyMuPDF and built a slide viewer in React/TypeScript.',
-      "Fixed a race condition where concurrent requests overwrote slides by isolating each request's output.",
+      'Redesigned slide storage to be request-scoped for concurrent users, served via a path-traversal-safe API.',
     ],
   },
   {
