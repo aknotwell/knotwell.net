@@ -1,10 +1,210 @@
-#root {
-  max-width: 1280px;
+.topbar,
+.page {
+  max-width: 720px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-p {
-  color: #888;
+/* ---------- Top bar ---------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  font-weight: 600;
+  color: var(--text);
+}
+.topbar-links {
+  display: flex;
+  gap: 1.25rem;
+}
+.topbar-links a {
+  color: var(--muted);
+}
+.topbar-links a.active {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ---------- Page ---------- */
+.page {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero h1,
+.page-head h1 {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+.tagline {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0 0 1rem;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-weight: 500;
+}
+
+section {
+  margin-top: 3rem;
+}
+h2 {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin: 0 0 1.25rem;
+}
+
+/* ---------- Entries ---------- */
+.entry {
+  display: block;
+  padding: 0 0 1.5rem;
+}
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  flex-wrap: wrap;
+}
+.entry h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+.entry-org {
+  color: var(--accent);
+  margin: 0.1rem 0 0;
+}
+.entry-org span {
+  color: var(--muted);
+}
+.entry-dates {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+  white-space: nowrap;
+}
+.entry ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+}
+.entry li {
+  margin-bottom: 0.3rem;
+}
+
+/* ---------- Skills ---------- */
+.skills {
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.skills div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+}
+.skills dt {
+  font-weight: 600;
+}
+.skills dt::after {
+  content: ':';
+}
+.skills dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ---------- Blog ---------- */
+.page-head {
+  margin-bottom: 2rem;
+}
+.post-link {
+  color: inherit;
+}
+.post-link:hover {
+  text-decoration: none;
+}
+.post-link:hover h3 {
+  color: var(--accent);
+}
+.post-link h3 {
+  margin: 0.15rem 0;
+}
+.post-summary {
+  color: var(--muted);
+  margin: 0;
+}
+.more {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.prose {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+.prose h2 {
+  font-size: 1.35rem;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--text);
+  border: none;
+  padding: 0;
+  margin: 2rem 0 0.75rem;
+}
+.prose h3 {
+  font-size: 1.15rem;
+  margin: 1.75rem 0 0.5rem;
+}
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose img {
+  max-width: 100%;
+}
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding: 0 1.25rem;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+}
+.prose code {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--code-bg);
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+}
+.prose pre {
+  background: var(--code-bg);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+}
+.prose pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 2rem 1rem 3rem;
 }
